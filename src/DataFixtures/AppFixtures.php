@@ -11,9 +11,9 @@ class AppFixtures extends Fixture
     public function load(ObjectManager $manager): void
     {
         $ticket = (new Ticket());
-        $ticket ->setEmail('user@web.com')
-                ->setDateOuverture('')
-                ->setDateCloture('')
+        $ticket ->setEmail('user@site.com')
+                ->setDateOuverture()
+                ->setDateCloture()
                 ->setDescription('')
                 ->setCategorie('Information')
                 ->setStatut('Nouveau')

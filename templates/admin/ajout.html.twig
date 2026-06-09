@@ -1,0 +1,24 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Ajout ticket{% endblock %}
+
+{% block body %}
+<h1 class="pt-2 text-center">Ajout d'un ticket</h1>
+
+{{form_start(form)}}
+
+{{form_row(form.email)}}
+{{form_row(form.dateOuverture)}}
+{{form_row(form.dateCloture)}}
+{{form_row(form.description)}}
+{{form_row(form.categorie)}}
+{{form_row(form.statut)}}
+{{form_row(form.responsable)}}
+
+<div class="row">
+    <div class="col"><a href=" {{ path('app_ticket')}} " class="btn btn-warning btn-block">Annuler</a></div>
+    <div class="col"><input type="submit", class="btn btn-success btn-block" value="valider"></div>
+</div>
+
+{{form_end(form)}}
+{% endblock %}

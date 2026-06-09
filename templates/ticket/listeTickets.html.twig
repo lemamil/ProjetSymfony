@@ -1,0 +1,16 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Liste des tickets{% endblock %}
+
+{% block body %}
+    <h1>Liste des tickets</h1>
+    {% for ticket in tickets %}
+        <div>{{ ticket.email }}</div>
+        <div>{{ ticket.description }}</div>
+        <div>{{ ticket.categorie }}</div>
+        <div>{{ ticket.dateOuverture }}</div>
+        <div>{{ ticket.dateCloture }}</div>
+        <div>{{ ticket.statut }}</div>
+        <div>{{ ticket.responsable }}</div>
+    {% endfor %}
+{% endblock %}

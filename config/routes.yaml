@@ -4,6 +4,11 @@ controllers:
         namespace: App\Controller
     type: attribute
 
-home:
-    path: /
+login:
+    path: /login
     controller: App\Controller\HomeController::index
+    
+logout:
+    path: /logout
+                # where to redirect after logout
+                # target: app_any_route
